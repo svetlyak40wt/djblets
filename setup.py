@@ -130,8 +130,11 @@ setup(name=PACKAGE_NAME,
           'Django>=1.5.4,<1.6',
           'django-pipeline>=1.3.15',
           'feedparser>=5.1.2',
-          'PIL',
           'pytz',
+      ],
+      extras_require=[
+          'PIL',    # djblets_images template tags use Image from PIL or Pillow
+          'Pillow',
       ],
       dependency_links = [
           "http://downloads.reviewboard.org/mirror/",
