@@ -132,10 +132,10 @@ setup(name=PACKAGE_NAME,
           'feedparser>=5.1.2',
           'pytz',
       ],
-      extras_require=[
-          'PIL',    # djblets_images template tags use Image from PIL or Pillow
-          'Pillow',
-      ],
+      extras_require={
+          'PIL': ['PIL'],      # djblets_images template tags use Image from PIL or Pillow
+          'Pillow': ['Pillow'],
+      },
       dependency_links = [
           "http://downloads.reviewboard.org/mirror/",
           download_url,
